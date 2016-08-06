@@ -1,10 +1,10 @@
 function highAndLow(numbers){
   // ...
   var numbersArry = numbers.split(" ");
-  var max = 0; 
+  var max = undefined; 
   var min = undefined;
   for(var i = 0; i < numbersArry.length; i++){
-    if(parseInt(numbersArry[i]) > max){
+    if(parseInt(numbersArry[i]) > max || max === undefined){
       max = numbersArry[i];
       // console.log(max);
     }else if (parseInt(numbersArry[i]) < min || min === undefined) {
