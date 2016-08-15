@@ -6,8 +6,8 @@ Arrays are joined by adding a single space between each consecutive array elemen
 
 function array(arr){
 
-  newArr = arr.replace(/,/g, "");
-  newArr = newArr.split("");
+  newArr = arr.split("");
+
 
   if(arr.length <= 4){
     return null
@@ -17,8 +17,8 @@ function array(arr){
   }
 
 
-  return newArr.join("");
+  return newArr.join("").replace(/,/g, " ").trim();
 }
 
 
-console.log(array('1,3'));
+console.log(array('1,2,3,4'));
